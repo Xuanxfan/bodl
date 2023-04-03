@@ -41,18 +41,16 @@ call_X = []
 call_Y = []
 put_X = []
 put_Y = []
-# 加一个混合
-# 做一个对比
 
-#numbers = 1139
+numbers = 113
 
 for csv_name in csv_list:
     if int(csv_name.split('.')[0]) % 100 == 0:
         print(csv_name)
     perdata = []
-    '''numbers -= 1
+    numbers -= 1
     if numbers == 0:
-        break'''
+        break
     csv_path = csv_folder +"\\"+csv_name
     data = pd.read_csv(csv_path, encoding = 'GBK', index_col= False)
     if len(data) < 11:
@@ -76,7 +74,31 @@ for csv_name in csv_list:
                 result = cov_model_put.predict(perdata)
             ll -= 1
             perdata = perdata[1:]
-            if result != 0:
+            print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
